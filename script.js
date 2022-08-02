@@ -6,6 +6,13 @@ const colorYellow = document.querySelector('#yellow');
 
 let corSelecionada = 'cor';
 
+function borda (){
+    const bordaElementos = document.querySelectorAll('.color');
+    for (let i = 0; i < bordaElementos.length; i += 1){
+        bordaElementos[i].style.border = "1px solid black"
+    };
+}
+borda();
 colorBlack.addEventListener('click', function () {
   cor = 'black';
 });
@@ -27,12 +34,23 @@ function backClassSelected(){
 backClassSelected();
 
 //Selecionando uma cor da paleta
-function selectColor(selecionar){
-    let SelectElement = document.querySelector('.selected');
-    SelectElement.classList.remove('selected');
-    selecionar.target.classList.add('selected');
- const botaoGrade = document.querySelector('.pixel');
- botaoGrade.addEventListener('click', function(){
+const selectElement = document.querySelectorAll('.color');
+function selecionandoERemovendo (){
+ for (let i = 0; i < selectElement.length; i += 1){
+    selectElement[i].classList.remove('selected');
+ }
+}
+function selectColor(){
+    for (let i = 0; i < selectColor.length; i += 1){
+        botaoGrade.addEventListener('click', function(event){
+            selecionandoERemovendo();
+            event.target.classList.add('selected');
+        });
+    }
+    selectColor(selecionar);  
+ 
+
+
    //for (let i = 0; i < botaoGrade.length; i +=1){
     if(botaoGrade.style.backgroundColor === "white"){
         botaoGrade.style.backgroundColor = 'selecionar';
@@ -40,9 +58,9 @@ function selectColor(selecionar){
         botaoGrade.style.backgroundColor = 'white';
     }
    //}
- });
+ 
 }
-//selectColor(selecionar);
+
 
 //criando grade pixel
 function criandoGradePixel(){
