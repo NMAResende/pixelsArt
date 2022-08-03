@@ -1,56 +1,84 @@
 .color {
-    /* border: 1 px solid black; */
     display: inline-block;
 }
-#black{
+
+#title {
+    text-align: center;
+    background-color: #be8ffa;
+    padding: 20px;
+}
+
+#black {
     background-color: black;
     height: 40px;
     width: 40px;
 }
+
 #green {
     background-color: green;
     height: 40px;
     width: 40px;
 }
+
 #blue {
     background-color: blue;
     height: 40px;
     width: 40px;
 }
-#yellow{
+
+#yellow {
     background-color: yellow;
     height: 40px;
     width: 40px;
     margin-bottom: 20px;
 }
-.pixel{
+
+.pixel {
     background-color: white;
     height: 40px;
     width: 40px;
     border: 1px solid black;
-    display:inline-block;
+    display: inline-block;
     margin: 0px;
     margin-top: -4px;
-   
-}
-#pixel-board{
-    display: table;
-    width: 250px;
-    margin: 0px; 
-    border-spacing:0; 
-   border-collapse: collapse;
 }
 
-table{
+#pixel-board {
+    display: table;
+    width: 250px;
+    margin-left: 690px;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+}
+
+/* table {
     border: 1px solid black;
-  }
-  table td {
-    border: 1px solid black; /* Style just to show the table cell boundaries */
-  }
-  
-  
-  table.no-spacing {
-    border-spacing:0; /* Removes the cell spacing via CSS */
-    border-collapse: collapse;  /* Optional - if you don't want to have double border where cells touch */
-  }
-  
+}
+
+table td {
+    border: 1px solid black;
+}
+
+
+table.no-spacing {
+    border-spacing: 0;
+    border-collapse: collapse;
+} */
+
+#clear-board {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+body{
+    background-color: #ffcff4;
+}
+
+#color-palette{
+    text-align: center;
+}
+
+#limpar{
+    text-align: center;
+}
