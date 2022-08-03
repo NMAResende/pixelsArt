@@ -5,6 +5,18 @@ const colorBlue = document.querySelector('#blue');
 const colorYellow = document.querySelector('#yellow');
 
 let corSelecionada = 'cor';
+colorBlack.addEventListener('click', function() {
+    cor = 'black';
+  });
+  colorGreen.addEventListener('click', function () {
+    cor = 'green'
+  });
+  colorBlue.addEventListener('click', function () {
+    cor = 'blue';
+  });
+  colorYellow.addEventListener('click', function () {
+    cor = 'yellow';
+  });
 
 function borda (){
     const bordaElementos = document.querySelectorAll('.color');
@@ -13,18 +25,6 @@ function borda (){
     };
 }
 borda();
-colorBlack.addEventListener('click', function () {
-  cor = 'black';
-});
-colorGreen.addEventListener('click', function () {
-  cor = 'green'
-});
-colorBlue.addEventListener('click', function () {
-  cor = 'blue';
-});
-colorYellow.addEventListener('click', function () {
-  cor = 'yellow';
-});
 //definindo a cor preta
 function backClassSelected(){
     colorBlack.classList.remove('color');
@@ -41,25 +41,25 @@ function selecionandoERemovendo (){
  }
 }
 function selectColor(){
-    for (let i = 0; i < selectColor.length; i += 1){
-        botaoGrade.addEventListener('click', function(event){
+    for (let i = 0; i < selectElement.length; i += 1){
+        selectElement[i].addEventListener('click', (event) => {
             selecionandoERemovendo();
             event.target.classList.add('selected');
         });
     }
-    selectColor(selecionar);  
+  }
+  selectColor();  
+
+  //  //for (let i = 0; i < botaoGrade.length; i +=1){
+  //   if(botaoGrade.style.backgroundColor === "white"){
+  //       botaoGrade.style.backgroundColor = 'selecionar';
+  //   }else {
+  //       botaoGrade.style.backgroundColor = 'white';
+  //   }
+  //  //}
  
 
 
-   //for (let i = 0; i < botaoGrade.length; i +=1){
-    if(botaoGrade.style.backgroundColor === "white"){
-        botaoGrade.style.backgroundColor = 'selecionar';
-    }else {
-        botaoGrade.style.backgroundColor = 'white';
-    }
-   //}
- 
-}
 
 
 //criando grade pixel
