@@ -86,3 +86,29 @@ function criandoGradePixel() {
   }
 }
 criandoGradePixel();
+
+//desafio 10
+const botao = document.getElementById('generate-board');
+const input = document.querySelectorAll('input');
+botao.addEventListener('click', function (){
+  const valores = null;
+    input.forEach(item =>{
+      if (item.value)
+      valores.push(parseFloat(item.value));
+      alert("Board inválido!");
+    });
+ function changeSize (){
+  input.innerHTML = '';
+  for(let i = 0; input.length; i += 1){
+    input.innerHTML += 'pixel';
+    input.innerHTML= Math.pow('generate-board', 2);
+ }
+}
+changeSize();
+ });
+ 
+
+
+
+
+  
